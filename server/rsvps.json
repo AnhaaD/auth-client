@@ -1,0 +1,17 @@
+{
+  "userId": "google-oauth2|101180823646776842961",
+  "eventId": "<EVENT_OBJECT_ID_STRING>",
+  "attending": true,
+  "guests": 3,
+  "comments": "Really looking forward to this!"
+}, {
+  "userId": "google-oauth2|101180823646776842961",
+  "eventId": "<EVENT_OBJECT_ID_STRING>",
+  "attending": false,
+  "comments": "Regretfully, I can't make it."
+}, {
+  "userId": "google-oauth2|110234669228219549150",
+  "eventId": "<EVENT_OBJECT_ID_STRING>",
+  "attending": true,
+  "guests": 2
+}
