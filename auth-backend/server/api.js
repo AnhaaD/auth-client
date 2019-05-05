@@ -7,7 +7,6 @@
 const jwt = require('express-jwt');
 const jwks = require('jwks-rsa');
 const Event = require('./models/Event');
-const Users = require('./models/Users');
 const Rsvp = require('./models/Rsvp');
 
 /*
@@ -47,7 +46,7 @@ module.exports = function(app, config) {
  */
 
   const _eventListProjection = 'title startDatetime endDatetime viewPublic';
-  const _userListProjection = '_id roles fullname email createdAt'
+
   // GET API root
   app.get('/api/', (req, res) => {
     res.send('API works');
@@ -67,21 +66,6 @@ module.exports = function(app, config) {
           });
         }
         res.send(eventsArr);
-      }
-    );
-  });
-  app.get('/api/users', (req, res) => {
-    Users.find({}, _userListProjection, (err, users) => {
-        let usersArr = [];
-        if (err) {
-          return res.status(500).send({message: err.message});
-        }
-        if (users) {
-          users.forEach(user => {
-            usersArr.push(user);
-          });
-        }
-        res.send(usersArr);
       }
     );
   });
@@ -290,6 +274,5 @@ module.exports = function(app, config) {
       });
     });
   });
- 
 
 };
