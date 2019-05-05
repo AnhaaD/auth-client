@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CallbackComponent } from './pages/callback/callback.component';
 import { MyRsvpsComponent } from './pages/my-rsvps/my-rsvps.component';
+import { VideoCatComponent } from './pages/videocat/video.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CallbackComponent,
-    MyRsvpsComponent
+    MyRsvpsComponent,
+    VideoCatComponent
   ],
   imports: [
     BrowserModule,

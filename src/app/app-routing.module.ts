@@ -7,6 +7,8 @@ import { AdminGuard } from './auth/admin.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { CallbackComponent } from './pages/callback/callback.component';
 import { MyRsvpsComponent } from './pages/my-rsvps/my-rsvps.component';
+import { VideoCatComponent } from './pages/videocat/video.component';
+
 
 const routes: Routes = [
   {
@@ -29,6 +31,14 @@ const routes: Routes = [
     component: MyRsvpsComponent,
     canActivate: [
       AuthGuard
+    ]
+  },
+  {
+    path: 'videocat',
+    component: VideoCatComponent,
+    canActivate: [
+      AuthGuard,
+      AdminGuard
     ]
   },
   {

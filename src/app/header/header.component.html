@@ -2,7 +2,7 @@
   <div class="header-page bg-primary">
     <a class="toggle-offcanvas bg-primary" (click)="toggleNav()"><span></span></a>
     <h1 class="header-page-siteTitle">
-      <a routerLink="/">RSVP</a>
+      <a routerLink="/">MENU</a>
     </h1>
     <div class="header-page-authStatus">
       <span *ngIf="auth.loggingIn">Logging in...</span>
@@ -25,6 +25,18 @@
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">Events</a>
       </li>
+      <li>
+        <a
+          routerLink="/videocat"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Category</a>
+      </li>
+      <li>
+          <a
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Contact</a>
+        </li>
       <li>
         <a
           *ngIf="auth.loggedIn"
